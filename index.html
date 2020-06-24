@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body class="background1">
+
+    <section class="overlay">
+        <h2>About this project<span class="close">&times;</span></h2>
+        <div>
+            <p>This is my first active JavaScript project. The idea and motivation for this collection of interactive animations
+               come from a website by <a href="https://webflow.com/ix2" target="_blank">Webflow</a> called "The History of the Web". Here I am 
+               attempting to recreate some of the effects they put on their website, namely the parallax motion between objects
+               relative to the position of the pointer on the screen, and the dynamic resizing of objects by using the mouse scroll.
+            </p>
+            <p>To enhance the user experience, I have 3 control buttons located at the bottom of the page. The button "B" is for 
+               toggling backgrounds, button "R" is for rescaling the images to original sizes, and button "T" is for themes but is actually a 
+               tongue-in-cheek joke<a href="https://www.express.co.uk/news/weird/883683/Flat-Earth-conspiracy-Ashes-Andrew-Flintoff-bbc-radio-5-live-robbie-savage-matthew-syed" target="_blank">*</a>.
+               These events can also be triggered by pressing "B", "R", or "T" on the keyboard.
+            </p>
+            <p>Last but not least, I hope you enjoy the features of this exhibition website as much as I enjoyed building them!</p>
+        </div>
+        <h3>Cheers!</h3>
+    </section> <!--overlay-->
+
+    <div class="modal"><p>About</p></div>
+
+    <section class="main-screen">
+        <div class="comets"><canvas></canvas></div>
+        <div class="left-piece">
+            <img src="assets/USS_Enterprise_(NCC-1701-A).png" alt="USSEnterprise">
+        </div> <!--left-piece-->
+        <div class="right-piece">
+            <img src="assets/moon.png" alt="earth">
+        </div> <!--right-piece-->
+        <div class="center-piece">
+            <img src="assets/earth.png" alt="moon">
+        </div> <!--center-piece-->
+    </section>
+    
+    <section class="control">
+        <div class="toggle"><p>B</p></div>
+        <div class="rescale"><p>R</p></div>
+        <div class="theme"><p>T</p></div>
+    </section>
+    
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="./script.js"></script>
+</body>
+</html>

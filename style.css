@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Modal overlay */
+.overlay {
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    position: fixed;
+    z-index: 1;
+    left: calc(50vw - 35vh - 50px);
+    top: calc(15vh - 50px);
+    width: 70vh; 
+    height: 70vh;
+    overflow: auto; 
+    padding: 50px 50px;
+    border-radius: 5%;
+    color: rgb(200, 200, 200);
+    background-color: rgb(54, 54, 54); 
+    background-color: rgba(54, 54, 54, 0.9); 
+}
+
+.overlay div { 
+    display: grid;
+    position: relative; 
+    text-indent: 100px;
+    text-align: left;
+}
+.overlap h2 h3 p { position: relative; text-align: left; }
+.overlay a { text-decoration: none; color: rgb(99, 246, 80);}
+.overlay h2 { font-family: 'Roboto Mono', monospace; font-size: 36px; font-weight: 400;}
+.overlay p { font-family: 'Roboto Mono', monospace; font-size: 18px; font-weight: 100;}
+.overlay h3 { font-family: 'Roboto Mono', monospace; font-size: 24px; font-weight: 400;}
+  
+/* The Close Button */
+.overlay h2 {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-items: stretch;
+}
+.close {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: rgb(99, 246, 80);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal {
+    grid-area: modal;
+    position: relative;;
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    transition: all 1s;
+}
+
+.modal:hover {
+    color: rgb(99, 246, 80);
+    cursor: pointer;;
+    transition: all 1s;
+}
+
+/* 2 backgrounds to toggle between */
+body.background1 {
+    background-image: url('assets/1-milkyway.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+
+body.background2 {
+    background-image: url('assets/2-milkyway.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+
+/* Define CSS-grid */
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 10px 1fr 2fr 1fr 10px;
+    grid-template-areas:
+    ".    .       ."
+    ".    modal   ."
+    "main main    main"
+    ".    control ."
+    ".    .       .";
+    justify-items: center;
+}
+.main-screen { grid-area: main }
+
+.control { 
+    grid-area: control; 
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-content: end;
+    grid-gap: 7.5px;
+}
+
+/* Styling the main elements: center-piece, left-piece, right-piece */
+div {
+    position: absolute;
+    text-align: center;
+    color: rgb(200, 200, 200);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+}
+
+.center-piece {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 1.5s;
+}
+
+.center-piece:hover {
+    background-color: rgba(128, 236, 255, 0.5);
+    transition: background-color 1.5s;
+}
+
+.center-piece img {
+    width: 350px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 1s;
+}
+
+.center-piece img:hover {
+    background-color: rgba(105, 182, 255, 0.5);
+    transition: background-color 1s;
+}
+
+.left-piece img {
+    width: 150px;
+    height: 100%;
+    border-radius: 20%;
+    transition: all 1.5s;
+}
+
+.left-piece:hover { transition: all 1.5s; }
+
+.left-piece img:hover {
+    width: 400px;
+    height: 100%;
+    border-radius: 20%;
+    transition: all 1.5s;
+}
+
+.right-piece {
+    width: 200px;
+    height: 200px;
+}
+
+.right-piece img {
+    width: 150px;
+}
+
+/* Alternative contents for the second theme*/
+.center-alt { content: url('assets/rutabaga.png'); }
+.left-alt { 
+    content: url('assets/rubber_duck.png'); 
+    width: 150px;
+    border-radius: 20%;
+    transition: all 1.5s;
+}
+.left-alt:hover { 
+    width: 400px;    
+    transition: all 1.5s; 
+}
+.right-alt { content: url('assets/Chick\ Inside\ An\ Egg.png'); }
+
+/* Styling the control buttons */
+.toggle {
+    border: 1px solid rgb(200, 200, 200);
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 5%;
+    font-size: 66px;
+    transition: all 1s;
+}
+
+.toggle:hover {
+    border-color: rgb(99, 246, 80);
+    color: rgb(99, 246, 80);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.rescale {
+    border: 1px solid rgb(200, 200, 200);
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 5%;
+    font-size: 66px;
+    transition: all 1s;
+}
+
+.rescale:hover {
+    border-color: rgb(99, 246, 80);
+    color: rgb(99, 246, 80);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.theme {
+    border: 1px solid rgb(200, 200, 200);
+    position: relative;;
+    width: 90px;
+    height: 90px;
+    border-radius: 5%;
+    font-size: 66px;
+    transition: all 1s;
+}
+
+.theme:hover {
+    border-color: rgb(99, 246, 80);
+    color: rgb(99, 246, 80);
+    cursor: pointer;
+    transition: all 1s;
+}
+
